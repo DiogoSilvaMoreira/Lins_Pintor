@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fff8e1; /* Fundo suave, cor relacionada a interiores */
+    color: #333;
+}
+
+header {
+    background-color: #ffb74d; /* Tons de laranja para transmitir acolhimento */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffe0b2;
+}
+
+main {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.service-detail h2 {
+    font-size: 2.5rem;
+    color: #e65100; /* Destaque para o título */
+    margin-bottom: 1rem;
+}
+
+.service-detail ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    text-align: left;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+.service-detail li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #4e342e; /* Tons terrosos suaves para complementar o tema */
+}
+
+.service-detail a.btn {
+    display: inline-block;
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.service-detail a.btn:hover {
+    background-color: #e65100;
+}
+
+footer {
+    background-color: #ffcc80; /* Cor mais clara para finalizar a página */
+    color: #333;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer form input, footer form textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ffab40;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+footer form button {
+    background-color: #ff6f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer form button:hover {
+    background-color: #e65100;
+}

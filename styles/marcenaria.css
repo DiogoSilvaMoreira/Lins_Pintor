@@ -1,0 +1,278 @@
+/* Resetando margens e configurando a fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif; /* Fonte serifada para um toque mais elegante */
+    line-height: 1.6;
+    background-color: #f4f1ec; /* Tons mais neutros para fundo */
+    color: #4a3c31; /* Cor escura e suave para o texto */
+    padding: 0 10%; /* Adiciona um espaçamento nas laterais */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #4e3629; /* Cor rica de marrom profundo */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #8d6e63; /* Bordas sutis para sofisticar */
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+header nav a {
+    color: #d7ccc8;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #efebe9; /* Cor mais clara para efeito hover */
+}
+
+/* Estilos principais */
+main {
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5d4037;
+}
+
+.service-detail h2 {
+    font-size: 2.5rem;
+    color: #4e342e;
+    margin-bottom: 1rem;
+    font-family: 'Lora', serif;
+}
+
+.service-detail p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.service-detail ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+    color: #4e342e;
+}
+
+.service-detail li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.service-detail a.btn {
+    display: inline-block;
+    background-color: #8d6e63;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-detail a.btn:hover {
+    background-color: #5d4037;
+    transform: translateY(-3px); /* Efeito sutil de "flutuar" */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #bcaaa4; /* Tom suave para finalizar a página */
+    color: #333;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer form input, footer form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: 2px solid #8d6e63;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+footer form input:focus, footer form textarea:focus {
+    border-color: #5d4037;
+    outline: none;
+}
+
+footer form button {
+    background-color: #8d6e63;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer form button:hover {
+    background-color: #5d4037;
+    transform: translateY(-3px);
+}
+
+/* Media Queries para adaptar o layout para dispositivos móveis */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 0 5%; /* Menos espaçamento nas laterais para tablets */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Menor fonte para o título em telas menores */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .service-detail h2 {
+        font-size: 2rem;
+    }
+
+    .service-detail ul {
+        font-size: 1rem;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 2%; /* Reduzir ainda mais o padding em telas menores */
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Fonte ainda menor em telas menores */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .service-detail h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-detail p {
+        font-size: 1rem;
+    }
+
+    .service-detail ul {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    footer h2 {
+        font-size: 1.4rem;
+    }
+
+    footer form input, footer form textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    footer form button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Para telas muito pequenas (celulares) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0 2%; /* Reduzir ainda mais o padding em telas muito pequenas */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Ajustar ainda mais a fonte */
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .service-detail h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-detail p {
+        font-size: 0.95rem;
+    }
+
+    footer h2 {
+        font-size: 1.2rem;
+    }
+
+    footer form input, footer form textarea {
+        font-size: 0.9rem;
+    }
+
+    footer form button {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
