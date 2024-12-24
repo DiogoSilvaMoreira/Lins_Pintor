@@ -16,7 +16,7 @@ a {
     color: inherit;
 }
 
-.btn {
+.btn-primary {
     display: inline-block;
     background: #e63946;
     color: #fff;
@@ -24,9 +24,11 @@ a {
     border-radius: 8px;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.btn:hover {
+.btn-primary:hover {
     background: #d62828;
 }
 
@@ -68,47 +70,12 @@ header nav ul li a:hover {
     color: #e63946;
 }
 
-/* Logo */
-header img {
-    width: 100px; /* Define a largura do logo */
-    height: 100px; /* Define a altura do logo */
-    border-radius: 50%; /* Torna o logo redondo */
-    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção */
+header .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-
-/* Nome abaixo do logo */
-.logo-name {
-    margin-top: 10px; /* Espaço entre o logo e o nome */
-    font-size: 1.2rem; /* Tamanho do nome */
-    font-weight: bold; /* Deixa o nome em negrito */
-    color: #fff; /* Cor do nome */
-}
-
-/* Sobre Nós */
-.sobre-nos {
-    background-color: #f4f4f9; /* Cor de fundo da seção */
-    padding: 4rem 2rem; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-}
-
-.sobre-nos h2 {
-    font-size: 2rem;
-    color: #1d3557; /* Cor do título */
-    margin-bottom: 1rem; /* Espaço abaixo do título */
-}
-
-.sobre-nos p {
-    font-size: 1rem;
-    color: #333; /* Cor do texto */
-    max-width: 800px; /* Limita a largura do texto */
-    margin: 0 auto; /* Centraliza o texto */
-    line-height: 1.6; /* Altura da linha */
-}
-
-.sobre-nos strong {
-    color: #e63946; /* Cor do nome da empresa */
-}
-
 
 /* Hero Section */
 #hero {
@@ -118,79 +85,71 @@ header img {
     padding: 4rem 2rem;
 }
 
-#hero .btn {
-    margin-top: 1rem;
-    background: #457b9d;
-}
-
-#hero .btn:hover {
-    background: #346890;
-}
-
-/* Categorias */
-#categories {
+/* Seção de Destaque */
+.section-highlight {
+    background-color: #f4f4f9;
     padding: 4rem 2rem;
     text-align: center;
+    border-bottom: 5px solid #e63946;
 }
 
+.section-highlight h2 {
+    font-size: 2.5rem;
+    color: #1d3557;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.section-highlight p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Serviços */
 .categories-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    padding: 4rem 2rem;
 }
 
-.category {
+.service-card {
     background: #fff;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.category:hover {
+.service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.category h3 {
+.service-card h3 {
     margin-bottom: 1rem;
     color: #457b9d;
+    font-size: 1.8rem;
+    text-transform: uppercase;
 }
 
-.category p {
-    margin-bottom: 1.5rem;
+.service-card p {
     color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* Carrossel */
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 1rem;
-}
-
-.carousel-item {
-    flex: 0 0 auto;
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Footer */
+/* Rodapé */
 footer {
     background: #1d3557;
     color: #fff;
     padding: 2rem;
     text-align: center;
+    border-top: 5px solid #e63946;
 }
 
 footer p {
@@ -200,4 +159,125 @@ footer p {
 footer i {
     margin-right: 10px;
     color: #e63946;
+    font-size: 1.2rem;
+}
+/* Controles do Carrossel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Botão de Chamada para Ação */
+.btn-primary {
+    background-color: #e63946; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 12px 24px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    font-weight: bold; /* Negrito */
+}
+
+.btn-primary:hover {
+    background-color: #d62828; /* Cor de fundo ao passar o mouse */
+}
+
+/* Seção de Destaque */
+.section-highlight {
+    background-color: #f4f4f9; /* Cor de fundo suave */
+    padding: 4rem 2rem; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    border-bottom: 5px solid #e63946; /* Linha inferior destacada */
+}
+
+.section-highlight h2 {
+    font-size: 2.5rem; /* Tamanho da fonte maior */
+    color: #1d3557; /* Cor do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+.section-highlight p {
+    font-size: 1.2rem; /* Tamanho da fonte do parágrafo */
+    color: #333; /* Cor do texto */
+    max-width: 800px; /* Largura máxima do parágrafo */
+    margin: 0 auto; /* Centralizar parágrafo */
+    line-height: 1.8; /* Altura da linha */
+}
+
+/* Cartão de Serviço */
+.service-card {
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 2rem; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    text-align: left; /* Alinhamento do texto à esquerda */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Elevar cartão ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Intensificar sombra */
+}
+
+.service-card h3 {
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+    color: #457b9d; /* Cor do título */
+    font-size: 1.8rem; /* Tamanho da fonte do título */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+.service-card p {
+    margin-bottom: 1.5rem; /* Espaço abaixo do parágrafo */
+    color: #666; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Altura da linha */
+}
+
+/* Rodapé */
+footer {
+    background-color: #1d3557; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    padding: 2rem; /* Espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    border-top: 5px solid #e63946; /* Linha superior destacada */
+}
+
+footer p {
+    margin: 0.5rem 0; /* Espaçamento vertical */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+footer i {
+    margin-right: 10px; /* Espaço à direita do ícone */
+    color: #e63946; /* Cor do ícone */
+    font-size: 1.2rem; /* Tamanho do ícone */
 }
