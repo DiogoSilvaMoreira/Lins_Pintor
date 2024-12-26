@@ -1,0 +1,92 @@
+/* Base para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header, footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .carousel-item {
+        width: 100%; /* Faz os itens do carrossel ocuparem toda a largura da tela */
+        margin-bottom: 20px;
+    }
+
+    .text h2 {
+        font-size: 1.5rem; /* Tamanho de texto adaptado */
+        padding: 0 10px;
+    }
+
+    .text p {
+        font-size: 1rem; /* Tamanho de texto adaptado */
+        padding: 0 10px;
+    }
+
+    .image img {
+        max-width: 100%; /* Garantir que as imagens se ajustem à tela */
+        height: auto;
+    }
+}
+
+/* Dispositivos móveis de 320px até 480px (Exemplo: iPhone SE, Galaxy A3, Xiaomi Redmi) */
+@media (max-width: 480px) {
+    .text h2 {
+        font-size: 1.2rem;
+    }
+
+    .text p {
+        font-size: 0.95rem;
+    }
+
+    .carousel-item {
+        margin: 0 5px;
+    }
+}
+
+/* Dispositivos de 480px até 600px (Exemplo: iPhone 6, 7, 8, Xiaomi Mi 10) */
+@media (max-width: 600px) {
+    .carousel-item {
+        margin: 0 10px;
+    }
+
+    .text h2 {
+        font-size: 1.3rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+}
+
+/* Dispositivos de 600px até 768px (Exemplo: iPhone 11, 12, 13, Galaxy S10, Mi 11) */
+@media (max-width: 768px) {
+    .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tela maior que 768px (Exemplo: Tablets, iPads) */
+@media (min-width: 769px) {
+    .carousel-item {
+        width: 45%; /* Ajuste para o carrossel em tablets */
+        margin: 0 10px;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.2rem;
+    }
+}
