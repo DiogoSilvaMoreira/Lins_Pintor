@@ -147,7 +147,6 @@
 }
 /* Estilo base para o cabeçalho (PC e Mobile) */
 header {
-    background-color: #1d3557;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra opcional */
 }
@@ -177,3 +176,18 @@ header {
     }
 }
 
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px; /* Ajuste o tamanho conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Ajuste para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    .logo {
+        max-width: 80px; /* Reduz ainda mais para telas muito pequenas */
+        height: auto; 
+    }
+}
