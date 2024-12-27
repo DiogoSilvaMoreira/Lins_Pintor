@@ -1,4 +1,4 @@
-/* CSS para dispositivos móveis (até 768px) */
+/* Base para dispositivos móveis */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
@@ -8,150 +8,111 @@
         box-sizing: border-box;
     }
 
-    header {
+    header, footer {
         padding: 10px;
-        background-color: #f8f9fa; /* Cor de fundo para o cabeçalho */
-    }
-
-    header .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header .logo img {
-        max-width: 120px; /* Ajuste para o tamanho da logo */
-        height: auto;
-    }
-
-    nav ul {
-        display: none; /* Esconde o menu inicialmente */
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        background-color: #f8f9fa; /* Fundo do menu */
-    }
-
-    nav ul.show {
-        display: flex; /* Mostra o menu quando ativado */
-    }
-
-    nav ul li {
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    #menu-toggle {
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* Hero Section */
-    #hero {
-        padding: 50px 20px;
-        text-align: center;
-        background-color: #e0e0e0; /* Cor de fundo alternativa */
-    }
-
-    #hero .btn-primary {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: #fff;
-        background-color: #007bff;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    /* Seção Sobre Nós */
-    .sobre-nos .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .sobre-nos .text h2 {
-        font-size: 1.5rem;
-    }
-
-    .sobre-nos .text p {
-        font-size: 1rem;
-        margin: 10px 0;
-    }
-
-    .sobre-nos .image img {
-        max-width: 100%;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    /* Carrossel */
     .carousel {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+        gap: 10px; /* Espaçamento entre itens */
     }
 
     .carousel-item {
-        flex: 0 0 80%; /* Tamanho de cada item */
-        margin: 0 10px;
-        scroll-snap-align: center;
+        flex: 0 0 100%; /* Faz os itens ocuparem toda a largura da tela */
+        margin: 0;
+        scroll-snap-align: center; /* Centraliza cada item na rolagem */
     }
 
-    .carousel img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px; /* Cantos arredondados */
+    .text h2 {
+        font-size: 1.5rem; /* Tamanho do texto adaptado */
+        padding: 0 10px;
     }
 
-    /* Serviços */
-    .categories-container {
-        display: grid;
-        grid-template-columns: 1fr; /* Uma coluna no mobile */
-        gap: 20px;
-        padding: 10px;
-    }
-
-    .service-card {
-        text-align: center;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #fff;
-    }
-
-    .service-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .service-card p {
+    .text p {
         font-size: 1rem;
-        margin: 10px 0;
+        padding: 0 10px;
     }
 
-    .service-card .btn-primary {
-        padding: 8px 15px;
-        font-size: 0.9rem;
+    .image img {
+        max-width: 100%; /* Ajusta as imagens para caberem na tela */
+        height: auto;
+    }
+}
+
+/* Dispositivos móveis muito pequenos (320px a 480px) */
+@media (max-width: 480px) {
+    .text h2 {
+        font-size: 1.2rem; /* Texto menor para telas muito pequenas */
     }
 
-    /* Rodapé */
-    footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #333;
-        color: #fff;
+    .text p {
+        font-size: 0.95rem;
+    }
+
+    .carousel-item {
+        margin: 0 5px;
     }
 
     footer p {
-        font-size: 1rem;
-        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Dispositivos pequenos (480px a 600px) */
+@media (max-width: 600px) {
+    .carousel-item {
+        margin: 0 10px; /* Adiciona espaçamento ao redor dos itens */
     }
 
-    footer i {
-        margin-right: 5px;
+    .text h2 {
+        font-size: 1.3rem; /* Aumenta um pouco o texto */
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+}
+
+/* Dispositivos médios (600px a 768px) */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 15px; /* Mais espaço para dispositivos maiores */
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 1.1rem;
+    }
+
+    .carousel-item {
+        flex: 0 0 90%; /* Itens um pouco menores para mais espaço */
+        margin: 0 auto; /* Centraliza os itens */
+    }
+}
+
+/* Dispositivos maiores que 768px */
+@media (min-width: 769px) {
+    .carousel {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .carousel-item {
+        width: 45%; /* Ajusta o tamanho dos itens para tablets */
+        margin: 0 10px;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.2rem;
     }
 }
