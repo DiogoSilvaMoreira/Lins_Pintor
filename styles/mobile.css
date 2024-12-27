@@ -1,4 +1,4 @@
-/* Base para dispositivos móveis */
+/* CSS para dispositivos móveis (até 768px) */
 @media (max-width: 768px) {
     body {
         font-size: 16px;
@@ -8,85 +8,150 @@
         box-sizing: border-box;
     }
 
-    header, footer {
+    header {
         padding: 10px;
+        background-color: #f8f9fa; /* Cor de fundo para o cabeçalho */
+    }
+
+    header .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo img {
+        max-width: 120px; /* Ajuste para o tamanho da logo */
+        height: auto;
+    }
+
+    nav ul {
+        display: none; /* Esconde o menu inicialmente */
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: #f8f9fa; /* Fundo do menu */
+    }
+
+    nav ul.show {
+        display: flex; /* Mostra o menu quando ativado */
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #menu-toggle {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    #hero {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: #e0e0e0; /* Cor de fundo alternativa */
+    }
+
+    #hero .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    /* Seção Sobre Nós */
+    .sobre-nos .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .carousel-item {
-        width: 100%; /* Faz os itens do carrossel ocuparem toda a largura da tela */
-        margin-bottom: 20px;
-    }
-
-    .text h2 {
-        font-size: 1.5rem; /* Tamanho de texto adaptado */
-        padding: 0 10px;
-    }
-
-    .text p {
-        font-size: 1rem; /* Tamanho de texto adaptado */
-        padding: 0 10px;
-    }
-
-    .image img {
-        max-width: 100%; /* Garantir que as imagens se ajustem à tela */
-        height: auto;
-    }
-}
-
-/* Dispositivos móveis de 320px até 480px (Exemplo: iPhone SE, Galaxy A3, Xiaomi Redmi) */
-@media (max-width: 480px) {
-    .text h2 {
-        font-size: 1.2rem;
-    }
-
-    .text p {
-        font-size: 0.95rem;
-    }
-
-    .carousel-item {
-        margin: 0 5px;
-    }
-}
-
-/* Dispositivos de 480px até 600px (Exemplo: iPhone 6, 7, 8, Xiaomi Mi 10) */
-@media (max-width: 600px) {
-    .carousel-item {
-        margin: 0 10px;
-    }
-
-    .text h2 {
-        font-size: 1.3rem;
-    }
-
-    .text p {
-        font-size: 1rem;
-    }
-}
-
-/* Dispositivos de 600px até 768px (Exemplo: iPhone 11, 12, 13, Galaxy S10, Mi 11) */
-@media (max-width: 768px) {
-    .text h2 {
+    .sobre-nos .text h2 {
         font-size: 1.5rem;
     }
 
-    .text p {
-        font-size: 1.1rem;
+    .sobre-nos .text p {
+        font-size: 1rem;
+        margin: 10px 0;
     }
-}
 
-/* Tela maior que 768px (Exemplo: Tablets, iPads) */
-@media (min-width: 769px) {
+    .sobre-nos .image img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* Carrossel */
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
     .carousel-item {
-        width: 45%; /* Ajuste para o carrossel em tablets */
+        flex: 0 0 80%; /* Tamanho de cada item */
         margin: 0 10px;
+        scroll-snap-align: center;
     }
 
-    .text h2 {
-        font-size: 2rem;
+    .carousel img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px; /* Cantos arredondados */
     }
 
-    .text p {
+    /* Serviços */
+    .categories-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma coluna no mobile */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .service-card {
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .service-card h3 {
         font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .service-card .btn-primary {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Rodapé */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    footer p {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    footer i {
+        margin-right: 5px;
     }
 }
