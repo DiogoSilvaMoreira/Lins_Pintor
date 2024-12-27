@@ -145,3 +145,35 @@
         color: #007bff; /* Cor ao passar o mouse */
     }
 }
+/* Estilo base para o cabeçalho (PC e Mobile) */
+header {
+    background-color: #1d3557;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra opcional */
+}
+
+/* Menu de navegação horizontal no celular */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex; /* Alinha os itens na horizontal */
+        justify-content: space-around; /* Espaçamento uniforme */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Espaçamento entre itens */
+    }
+
+    nav ul a {
+        text-decoration: none; /* Remove sublinhado dos links */
+        color: #333; /* Cor do texto */
+        font-size: 1rem; /* Tamanho do texto */
+    }
+
+    nav ul a:hover {
+        color: #007bff; /* Cor ao passar o mouse */
+    }
+}
+
