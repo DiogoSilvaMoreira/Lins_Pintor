@@ -242,7 +242,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-        color: #fff;
+    background-color: #142049; /* Cor de fundo */
+    color: #fff;
     text-align: center;
     padding: 1rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -256,14 +257,19 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+header nav {
+    display: flex;
+    flex-direction: column; /* Links em coluna (vertical) */
+    align-items: flex-end; /* Alinha os links à direita */
+}
+
 header nav ul {
     list-style: none;
-    margin: 0.5rem 0;
+    margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap; /* Quebra de linha em dispositivos pequenos */
+    flex-direction: column; /* Links em coluna */
+    gap: 1rem; /* Espaçamento entre os links */
 }
 
 header nav a {
@@ -278,7 +284,7 @@ header nav a {
 header nav a:hover,
 header nav a:focus {
     color: #efebe9; /* Cor mais clara no hover */
-    transform: translateY(-2px); /* Efeito de destaque */
+    transform: translateX(5px); /* Efeito de movimento no hover */
 }
 
 /* Media Queries para dispositivos móveis */
