@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Lora', serif; /* Fonte serifada para um toque mais elegante */
+    font-family: 'Roboto', sans-serif; /* Fonte sans-serif mais moderna */
     line-height: 1.6;
     background-color: #f4f1ec; /* Tons mais neutros para fundo */
     color: #4a3c31; /* Cor escura e suave para o texto */
@@ -19,35 +19,29 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #4e3629; /* Cor rica de marrom profundo */
+    background-color: #4e3629; /* Azul profundo */
     color: #fff;
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #8d6e63; /* Bordas sutis para sofisticar */
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
 header h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-header p {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    font-weight: 400;
-}
-
 header nav ul {
     list-style: none;
-    margin-top: 1rem;
+    margin: 0.5rem 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap; /* Para quebrar linhas em dispositivos pequenos */
 }
 
 header nav a {
@@ -66,8 +60,8 @@ header nav a:hover {
 
 /* Ajuste para evitar sobreposição ao usar cabeçalho fixo */
 main {
-    margin-top: 8rem; /* Espaçamento para compensar a altura do cabeçalho */
-    padding: 4rem 0;
+    margin-top: 6rem; /* Espaçamento para compensar a altura do cabeçalho */
+    padding: 2rem 0;
     text-align: center;
     font-size: 1.2rem;
     color: #5d4037;
@@ -75,10 +69,9 @@ main {
 
 /* Estilos principais */
 .service-detail h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #4e342e;
     margin-bottom: 1rem;
-    font-family: 'Lora', serif;
 }
 
 .service-detail p {
@@ -102,24 +95,6 @@ main {
     line-height: 1.6;
 }
 
-.service-detail a.btn {
-    display: inline-block;
-    background-color: #8d6e63;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    margin-top: 1.5rem;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.service-detail a.btn:hover {
-    background-color: #5d4037;
-    transform: translateY(-3px); /* Efeito sutil de "flutuar" */
-}
-
 /* Estilos do rodapé */
 footer {
     background-color: #bcaaa4; /* Tom suave para finalizar a página */
@@ -127,179 +102,68 @@ footer {
     text-align: center;
     padding: 3rem 1rem;
     margin-top: 4rem;
-    font-family: 'Roboto', sans-serif;
 }
 
-footer h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-footer p {
-    margin-bottom: 1rem;
-}
-
-footer form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-footer form input, footer form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 12px;
-    border: 2px solid #8d6e63;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #fff;
-    transition: border-color 0.3s ease;
-}
-
-footer form input:focus, footer form textarea:focus {
-    border-color: #5d4037;
-    outline: none;
-}
-
-footer form button {
-    background-color: #8d6e63;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-footer form button:hover {
-    background-color: #5d4037;
-    transform: translateY(-3px);
-}
-
-/* Media Queries para adaptar o layout para dispositivos móveis */
-@media screen and (max-width: 1024px) {
+/* Media Queries para dispositivos móveis */
+@media screen and (max-width: 768px) {
     body {
-        padding: 0 5%; /* Menos espaçamento nas laterais para tablets */
+        padding: 0 5%; /* Menos espaçamento nas laterais para tablets e celulares */
     }
 
     header h1 {
-        font-size: 2.5rem; /* Menor fonte para o título em telas menores */
+        font-size: 1.8rem; /* Fonte menor para o título */
     }
 
-    header p {
-        font-size: 1rem;
+    header nav ul {
+        gap: 0.5rem; /* Reduz espaçamento entre links */
     }
 
     .service-detail h2 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Ajuste do tamanho do título */
     }
 
     .service-detail ul {
-        font-size: 1rem;
+        font-size: 1rem; /* Tamanho menor da fonte */
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0 2%; /* Menos espaçamento nas laterais */
+    }
+
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Fonte menor para o título */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Links em coluna para mais espaço */
+        gap: 0.8rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem; /* Texto menor nos links */
+    }
+
+    .service-detail h2 {
+        font-size: 1.6rem; /* Menor tamanho para o título */
+    }
+
+    .service-detail ul {
+        font-size: 1rem; /* Ajuste do tamanho da fonte */
+        padding-left: 1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem; /* Menos espaçamento no rodapé */
     }
 
     footer h2 {
         font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        padding: 0 2%; /* Reduzir ainda mais o padding em telas menores */
-    }
-
-    header {
-        padding: 2rem 1rem;
-    }
-
-    header h1 {
-        font-size: 2rem; /* Fonte ainda menor em telas menores */
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .service-detail h2 {
-        font-size: 1.8rem;
-    }
-
-    .service-detail p {
-        font-size: 1rem;
-    }
-
-    .service-detail ul {
-        font-size: 1rem;
-        padding-left: 1rem;
-    }
-
-    footer h2 {
-        font-size: 1.4rem;
-    }
-
-    footer form input, footer form textarea {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    footer form button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
-
-/* Para telas muito pequenas (celulares) */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 0 2%; /* Reduzir ainda mais o padding em telas muito pequenas */
-    }
-
-    header h1 {
-        font-size: 1.8rem; /* Ajustar ainda mais a fonte */
-    }
-
-    header p {
-        font-size: 0.9rem;
-    }
-
-    .service-detail h2 {
-        font-size: 1.6rem;
-    }
-
-    .service-detail p {
-        font-size: 0.95rem;
-    }
-
-    footer h2 {
-        font-size: 1.2rem;
-    }
-
-    footer form input, footer form textarea {
-        font-size: 0.9rem;
-    }
-
-    footer form button {
-        font-size: 0.9rem;
-        padding: 8px 18px;
-    }
-}
-/* Ajuste global para compensar cabeçalho fixo */
-main {
-    margin-top: calc(1.5rem + 1rem + 3rem); /* Calcula a altura dinâmica do cabeçalho */
-}
-
-/* Ajuste em Media Queries */
-@media screen and (max-width: 768px) {
-    main {
-        margin-top: calc(2rem + 1rem); /* Ajuste menor para telas menores */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    main {
-        margin-top: calc(2rem + 1rem); /* Ajuste ainda menor */
     }
 }
