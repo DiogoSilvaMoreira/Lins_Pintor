@@ -51,6 +51,11 @@ header nav ul {
     gap: 1.5rem;
     flex-wrap: wrap;
 }
+header nav ul {
+    flex-direction: column; /* Links em coluna para mais espaço */
+    gap: 0.8rem;
+}
+
 
 header nav a {
     color: #d7ccc8;

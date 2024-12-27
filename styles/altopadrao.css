@@ -28,6 +28,10 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+header nav ul {
+    flex-direction: column; /* Links em coluna para mais espaço */
+    gap: 0.8rem;
+}
 
 .logo h1 {
     font-size: 2rem;
@@ -41,14 +45,12 @@ header {
 
 header nav {
     margin-left: auto; /* Move a navegação para a direita */
-
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap;
 }
 
 header nav a {

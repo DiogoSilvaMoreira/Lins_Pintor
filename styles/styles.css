@@ -51,6 +51,11 @@ header .header-container {
     flex-wrap: wrap;
     padding: 0 1rem;
 }
+header nav ul {
+    flex-direction: column; /* Links em coluna para mais espaço */
+    gap: 0.8rem;
+}
+
 
 header nav ul {
     list-style: none;
