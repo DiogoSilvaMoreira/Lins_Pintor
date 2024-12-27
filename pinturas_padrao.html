@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texturas - Lins Pintor</title>
-    <link rel="stylesheet" href="styles/textura.css">
+    <title>Pinturas de Alto Padrão - Lins Pintor</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/altopadrao.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="header-container">
             <div class="logo">
-                <h1>Texturas</h1>
-                <p>Acabamentos criativos para seu espaço</p>
+                <img src="images/logo.jpg" alt="LogoTipo" class="logo-image">
             </div>
             <nav>
                 <ul>
@@ -19,30 +24,70 @@
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-            </nav>       
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="service-detail">
-            <h2>Serviço de Texturas</h2>
-            <p>Criamos acabamentos texturizados exclusivos, que adicionam personalidade e estilo às suas paredes, utilizando técnicas modernas e materiais de alta qualidade.</p>
+        <!--! Descrição dos Serviços -->
+        <section class="service-detail" id="services">
+            <div class="container">
+                <h2>Pinturas de Alto Padrão</h2>
+                <p>
+                    Transforme seus ambientes com nossas técnicas de pintura de alto padrão. Utilizamos materiais de qualidade superior e aplicamos acabamentos impecáveis para um resultado sofisticado e duradouro.
+                </p>
+                <ul>
+                    <li><strong>Acabamentos de luxo</strong> que destacam cada detalhe.</li>
+                    <li><strong>Materiais premium</strong> para garantir durabilidade e beleza.</li>
+                    <li><strong>Pintura personalizada</strong> para atender ao seu estilo e necessidades.</li>
+                    <li><strong>Equipe qualificada</strong> para entregar resultados perfeitos.</li>
+                </ul>
+            </div>
+        </section>
 
-            <ul>
-                <li>Texturas modernas e clássicas.</li>
-                <li>Aplicações criativas e personalizadas.</li>
-                <li>Durabilidade e facilidade de manutenção.</li>
-                <li>Equipe especializada em acabamentos artísticos.</li>
-            </ul>
+        <!--! Carrossel de Projetos -->
+        <section id="projects">
+            <h2>Projetos de Pintura</h2>
+            <div class="carousel">
+                <div class="carousel-item"><img src="images/pintura1.jpg" alt="Projeto 1"></div>
+                <div class="carousel-item"><img src="images/pintura2.jpg" alt="Projeto 2"></div>
+            </div>
+        </section>
 
-            <a href="#contact" class="btn">Entrar em Contato</a>
+        <!--! Galeria de Projetos -->
+        <section class="portfolio">
+            <div class="container">
+                <h3>Portfólio de Pinturas</h3>
+                <p>
+                    Confira alguns dos trabalhos realizados, onde aplicamos técnicas inovadoras para criar ambientes únicos e sofisticados.
+                </p>
+                <div class="gallery">
+                    <div class="project">
+                        <img src="images/pintura3.jpg" alt="Projeto de pintura interior">
+                        <p>Pintura com acabamento fosco em sala de estar.</p>
+                    </div>
+                    <div class="project">
+                        <img src="images/pintura4.jpg" alt="Pintura de fachada">
+                        <p>Fachada com pintura de alto padrão.</p>
+                    </div>
+                    <div class="project">
+                        <img src="images/pintura5.jpg" alt="Detalhes decorativos">
+                        <p>Detalhes decorativos em ambientes residenciais.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer id="contact">
-        <h2>Entre em Contato</h2>
-        <p>Email: contato@linspintor.com</p>
-        <p>Telefone: (XX) XXXX-XXXX</p>
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p><i class="fas fa-envelope"></i> Email: linspintor@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Telefone: (35) 9 9983-0670</p>
+        </div>
     </footer>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

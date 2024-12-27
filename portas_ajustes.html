@@ -4,45 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinturas Externas - Lins Pintor</title>
-    <link rel="stylesheet" href="styles/externa.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/porta.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Cabeçalho -->
+    <header class="header">
         <div class="header-container">
             <div class="logo">
-                <h1>Pinturas Externas</h1>
-                <p>Proteção e beleza para suas áreas externas</p>
+                <img src="images/logo.jpg" alt="LogoTipo" class="logo-image">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-menu">
                     <li><a href="index.html">Voltar ao Início</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-            </nav>       
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="service-detail">
-            <h2>Serviço de Pinturas Externas</h2>
-            <p>Oferecemos soluções de pintura externa que aliam durabilidade e estética, protegendo sua propriedade contra as intempéries e garantindo um visual renovado.</p>
+        <!-- Descrição dos Serviços -->
+        <section class="service-detail" id="services">
+            <div class="container">
+                <h2>Portas</h2>
+                <p>
+                    Oferecemos soluções de pintura externa que aliam durabilidade e estética, protegendo sua propriedade contra as intempéries e garantindo um visual renovado.
+                </p>
+                <ul>
+                    <li><strong>Preparação adequada</strong> das superfícies externas.</li>
+                    <li><strong>Uso de tintas resistentes</strong> a intempéries.</li>
+                    <li><strong>Acabamento profissional</strong> e uniforme.</li>
+                    <li><strong>Equipes treinadas</strong> para atender suas necessidades.</li>
+                </ul>
+            </div>
+        </section>
 
-            <ul>
-                <li>Preparacão adequada das superfícies externas.</li>
-                <li>Uso de tintas resistentes a intempéries.</li>
-                <li>Acabamento profissional e uniforme.</li>
-                <li>Equipes treinadas para atender suas necessidades.</li>
-            </ul>
-
-            <a href="#index.html" class="btn">Entrar em Contato</a>
+        <!-- Galeria de Projetos -->
+        <section class="portfolio">
+            <div class="container">
+                <h3>Projetos Realizados</h3>
+                <p>
+                    Confira alguns dos projetos realizados, demonstrando a qualidade e a atenção aos detalhes que aplicamos em cada trabalho.
+                </p>
+                <div class="gallery">
+                    <div class="project">
+                        <img src="images/projeto1.jpg" alt="Pintura de fachada">
+                        <p>Pintura de fachada residencial.</p>
+                    </div>
+                    <div class="project">
+                        <img src="images/projeto2.jpg" alt="Pintura comercial">
+                        <p>Pintura de prédio comercial.</p>
+                    </div>
+                    <div class="project">
+                        <img src="images/projeto3.jpg" alt="Pintura de portão">
+                        <p>Pintura de portão e cercado.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer id="contact">
-        <h2>Entre em Contato</h2>
-        <p>Email: contato@linspintor.com</p>
-        <p>Telefone: (XX) XXXX-XXXX</p>
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p><i class="fas fa-envelope"></i> Email: linspintor@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Telefone: (35) 9 9983-0670</p>
+        </div>
     </footer>
 </body>
 </html>

@@ -3,54 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinturas Internas - Lins Pintor</title>
-    <link rel="stylesheet" href="styles/interna.css">
+    <title>Pinturas Externas - Lins Pintor</title>
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/pintura.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="header-container">
-            <h1>Lins Pintor</h1>
-            <p>Transformando interiores com excelência</p>
+            <div class="logo">
+                <img src="images/logo.jpg" alt="LogoTipo" class="logo-image">
+            </div>
             <nav>
-                <a href="index.html">Voltar ao Início</a>
+                <ul>
+                    <li><a href="index.html">Voltar ao Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="service-intro">
-            <h2>Pinturas Internas</h2>
-            <p>Oferecemos serviços especializados de pintura interna para residências e escritórios. Nosso objetivo é transformar seus ambientes com cores que encantam e acabamentos impecáveis.</p>
-        </section>
-
-        <section class="service-details">
-            <h3>Benefícios do Serviço</h3>
-            <ul>
-                <li>Uso de materiais de alta qualidade</li>
-                <li>Equipe especializada</li>
-                <li>Acabamento limpo e profissional</li>
-            </ul>
-        </section>
-
-        <section class="gallery">
-            <h3>Galeria de Projetos</h3>
-            <div class="images">
-                <img src="pintura1.jpg" alt="Exemplo de pintura interna">
-                <img src="pintura2.jpg" alt="Projeto finalizado de pintura interna">
+        <!--! Descrição dos Serviços -->
+        <section class="service-detail" id="services">
+            <div class="container">
+                <h2>Pinturas Externas</h2>
+                <p>
+                    Oferecemos serviços de pintura externa que protegem e embelezam suas fachadas, utilizando produtos de alta qualidade para garantir durabilidade e acabamento impecável.
+                </p>
+                <ul>
+                    <li><strong>Proteção contra intempéries</strong> para manter a integridade da fachada.</li>
+                    <li><strong>Estilo personalizado</strong> que combina com seu imóvel.</li>
+                    <li><strong>Materiais premium</strong> que garantem longa durabilidade.</li>
+                    <li><strong>Execução dentro do prazo</strong> e com máxima eficiência.</li>
+                </ul>
             </div>
         </section>
 
-        <section class="cta">
-            <p>Pronto para transformar seu espaço?</p>
-            <a href="#contact" class="btn">Entrar em Contato</a>
+        <!--! Carrossel de Projetos -->
+        <section id="projects">
+            <h2>Nossos Projetos</h2>
+            <div class="carousel">
+                <div class="carousel-item"><img src="images/fachada1.jpg" alt="Projeto de pintura externa 1"></div>
+                <div class="carousel-item"><img src="images/fachada2.jpg" alt="Projeto de pintura externa 2"></div>
+            </div>
+        </section>
+
+        <!--! Galeria de Projetos -->
+        <section class="portfolio">
+            <div class="container">
+                <h3>Projetos Realizados</h3>
+                <p>
+                    Conheça alguns dos trabalhos realizados, destacando o cuidado e a dedicação aplicados em cada projeto.
+                </p>
+                <div class="gallery">
+                    <div class="project">
+                        <img src="images/exterior1.jpg" alt="Pintura em fachada residencial">
+                        <p>Fachada residencial renovada com pintura moderna.</p>
+                    </div>
+                    <div class="project">
+                        <img src="images/exterior2.jpg" alt="Pintura em edifício comercial">
+                        <p>Edifício comercial com acabamento profissional.</p>
+                    </div>
+                    <div class="project">
+                        <img src="images/exterior3.jpg" alt="Pintura em casa de campo">
+                        <p>Pintura externa em casa de campo com proteção UV.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer id="contact">
-        <h2>Entre em Contato</h2>
-        <p>Email: contato@linspintor.com</p>
-        <p>Telefone: (XX) XXXX-XXXX</p>
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p><i class="fas fa-envelope"></i> Email: linspintor@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Telefone: (35) 9 9983-0670</p>
+        </div>
     </footer>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
-
