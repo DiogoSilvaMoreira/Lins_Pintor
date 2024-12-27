@@ -286,3 +286,20 @@ footer form button:hover {
         padding: 8px 18px;
     }
 }
+/* Ajuste global para compensar cabeçalho fixo */
+main {
+    margin-top: calc(1.5rem + 1rem + 3rem); /* Calcula a altura dinâmica do cabeçalho */
+}
+
+/* Ajuste em Media Queries */
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: calc(2rem + 1rem); /* Ajuste menor para telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin-top: calc(2rem + 1rem); /* Ajuste ainda menor */
+    }
+}
