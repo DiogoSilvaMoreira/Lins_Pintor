@@ -58,6 +58,7 @@ header nav ul {
     margin: 0;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 header nav ul li a {
