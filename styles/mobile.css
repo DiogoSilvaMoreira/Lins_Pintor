@@ -116,3 +116,32 @@
         font-size: 1.2rem;
     }
 }
+/* Menu na horizontal em dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        background-color: #f8f9fa; /* Cor de fundo opcional */
+    }
+
+    nav ul {
+        display: flex; /* Define os itens em linha */
+        justify-content: space-around; /* Distribui espaço entre os itens */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Espaçamento lateral entre itens */
+    }
+
+    nav ul a {
+        text-decoration: none; /* Remove sublinhado dos links */
+        color: #333; /* Cor dos links */
+        font-size: 1rem; /* Tamanho do texto */
+    }
+
+    nav ul a:hover {
+        color: #007bff; /* Cor ao passar o mouse */
+    }
+}
