@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte sans-serif mais moderna */
+    font-family: 'Roboto', sans-serif; /* Fonte sans-serif moderna */
     line-height: 1.6;
-    background-color: #f4f1ec; /* Tons mais neutros para fundo */
-    color: #4a3c31; /* Cor escura e suave para o texto */
-    padding: 0 10%; /* Adiciona um espaçamento nas laterais */
+    background-color: #f4f1ec; /* Fundo neutro */
+    color: #4a3c31; /* Texto suave */
+    padding: 0 10%; /* Espaçamento lateral */
 }
 
 /* Estilos do cabeçalho */
@@ -24,7 +24,7 @@ header {
     text-align: center;
     padding: 1rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    z-index: 1000; /* Garante visibilidade acima dos outros elementos */
 }
 
 header h1 {
@@ -41,7 +41,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap; /* Para quebrar linhas em dispositivos pequenos */
+    flex-wrap: wrap; /* Links quebram em dispositivos pequenos */
 }
 
 header nav a {
@@ -54,13 +54,13 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #efebe9; /* Cor mais clara para efeito hover */
-    transform: translateY(-2px); /* Efeito sutil de destaque */
+    color: #efebe9; /* Destaque ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de leve elevação */
 }
 
-/* Ajuste para evitar sobreposição ao usar cabeçalho fixo */
+/* Espaçamento do conteúdo principal */
 main {
-    margin-top: 6rem; /* Espaçamento para compensar a altura do cabeçalho */
+    margin-top: 6rem; /* Altura do cabeçalho compensada */
     padding: 2rem 0;
     text-align: center;
     font-size: 1.2rem;
@@ -97,40 +97,40 @@ main {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #bcaaa4; /* Tom suave para finalizar a página */
+    background-color: #bcaaa4; /* Cor suave para contraste */
     color: #333;
     text-align: center;
     padding: 3rem 1rem;
     margin-top: 4rem;
 }
 
-/* Media Queries para dispositivos móveis */
+/* Media Queries */
 @media screen and (max-width: 768px) {
     body {
-        padding: 0 5%; /* Menos espaçamento nas laterais para tablets e celulares */
+        padding: 0 5%;
     }
 
     header h1 {
-        font-size: 1.8rem; /* Fonte menor para o título */
+        font-size: 1.8rem;
     }
 
     header nav ul {
-        gap: 0.5rem; /* Reduz espaçamento entre links */
+        gap: 0.5rem;
     }
 
     .service-detail h2 {
-        font-size: 1.8rem; /* Ajuste do tamanho do título */
+        font-size: 1.8rem;
     }
 
     .service-detail ul {
-        font-size: 1rem; /* Tamanho menor da fonte */
+        font-size: 1rem;
         padding-left: 1rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     body {
-        padding: 0 2%; /* Menos espaçamento nas laterais */
+        padding: 0 2%;
     }
 
     header {
@@ -138,29 +138,29 @@ footer {
     }
 
     header h1 {
-        font-size: 1.5rem; /* Fonte menor para o título */
+        font-size: 1.5rem;
     }
 
     header nav ul {
-        flex-direction: column; /* Links em coluna para mais espaço */
+        flex-direction: column; /* Links em coluna */
         gap: 0.8rem;
     }
 
     header nav a {
-        font-size: 0.9rem; /* Texto menor nos links */
+        font-size: 0.9rem;
     }
 
     .service-detail h2 {
-        font-size: 1.6rem; /* Menor tamanho para o título */
+        font-size: 1.6rem;
     }
 
     .service-detail ul {
-        font-size: 1rem; /* Ajuste do tamanho da fonte */
+        font-size: 1rem;
         padding-left: 1rem;
     }
 
     footer {
-        padding: 2rem 1rem; /* Menos espaçamento no rodapé */
+        padding: 2rem 1rem;
     }
 
     footer h2 {
